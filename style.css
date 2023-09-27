@@ -20,13 +20,15 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-}
-.home {
-  width: 100%;
   height: 100vh;
 }
 
+.sidebar{
+  display: none;
+}
+
 nav {
+  position: absolute;
   width: 100%;
   height: 100px;
   display: flex;
@@ -47,14 +49,157 @@ a {
 .nav {
   padding: 100px;
 }
+.nav i {
+  display: none;
+}
 #logo {
   padding: 100px;
 }
 .nav a {
   margin-left: 50px;
 }
-
-/* content */
-.container{
+.home {
+  width: 100%;
+  height: 100vh;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home h1 {
+  font-size: 90px;
+  margin: 0%;
+  padding: 0%;
+}
+.home span {
+  margin: 0%;
+  padding: 0%;
+  font-size: 40px;
+  font-weight: 10%;
+}
+
+.home p {
+  font-size: 20px;
+  padding: 0 250px;
+}
+
+button {
+  background-color: black;
+  color: aqua;
+  width: 150px;
+  margin: 0%;
+  padding: 15px;
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  button {
+    width: 100px;
+    background-color: white;
+    padding: 5px;
+    font-size: 15px;
+    color: rgb(65, 106, 146);
+    border: none;
+  }
+  body {
+    background-image: linear-gradient(
+        360deg,
+        rgba(0, 0, 0, 0.58),
+        rgba(65, 106, 146, 0.49),
+        rgb(0, 0, 0)
+      ),
+      url(./images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 100px;
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.168); */
+    border: none;
+  }
+  nav img {
+    width: 150px;
+    height: 150px;
+    mix-blend-mode: screen;
+  }
+  a {
+    text-decoration: none;
+    font-size: 20px;
+  }
+
+  .nav {
+    margin: 0%;
+    padding: 5%;
+  }
+
+  .nav i {
+    display: block;
+    font-weight: 10px;
+  }
+
+  #logo {
+    padding: 10px;
+  }
+  .nav a {
+    display: none;
+    margin-left: 50px;
+  }
+
+  .home {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home h1 {
+    font-size: 50px;
+    margin: 0%;
+    padding: 0%;
+  }
+  .home span {
+    margin: 0%;
+    padding: 0%;
+    font-size: 30px;
+    font-weight: 10%;
+  }
+
+  .home p {
+    font-size: 10px;
+    padding: 5%;
+  }
+  .sidebar {
+    display: block;
+    background-color: rgba(0, 0, 255, 0.31);
+    position: fixed;
+    height: 100vh;
+    width: 200px;
+    right: 200%;
+    transition: 1s;
+  }
+  .active {
+    display: block;
+    background-color: rgba(12, 36, 58, 0.407);
+    position: fixed;
+    height: 100vh;
+    width: 200px;
+    right: 52%;
+  }
+  .sidebar li {
+    justify-content: center;
+    list-style-type: none;
+    margin-top: 60px;
+    padding: 0 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.123);
+  }
 }
